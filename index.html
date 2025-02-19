@@ -11,6 +11,14 @@
 
 <body>
     <h1>Descubre España</h1>
+    <button id="toggle-specs-btn">Mostrar Info</button>
+    <br>
+    <div id="specs" class="hidden">
+        <p>Selecciona una comunidad autònoma, una província y una población para ver una imagen de la localidad.</p>
+        <p>Esta función se ejecuta al hacer clic en el botón “Pantalla completa”. Llama a e.stopPropagation() para
+            evitar el clic afecte a otros elementos y utiliza el requestFullscreen para que se muestre la imagen en
+            pantalla completa.</p>
+    </div>
     <form action="">
         <label>Comunitat: </label><select name="ccaa" id="ccaa">
             <option value="" disabled selected>Selecciona una opción</option>

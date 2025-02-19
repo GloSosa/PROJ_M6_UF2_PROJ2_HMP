@@ -10,6 +10,28 @@ body {
     height: auto;
 }
 
+#toggle-specs-btn:hover {
+    background-color: #2a5298;
+}
+
+
+#specs {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    background-color: #2a5298;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
 form {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;

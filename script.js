@@ -1,6 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Esperar a que el DOM cargue completamente antes de ejecutar el código
 
+
+    const toggleBtn = document.getElementById("toggle-specs-btn");
+    const specsDiv = document.getElementById("specs");
+
+    toggleBtn.addEventListener("click", () => {
+        specsDiv.classList.toggle("hidden");
+        if (specsDiv.classList.contains("hidden")) {
+            toggleBtn.textContent = "Mostrar Info";
+        } else {
+            toggleBtn.textContent = "Ocultar Info";
+        }
+    });
+
+
     const comunidadAutonoma = document.getElementById("ccaa"); // Guardo en variable los selects del formulario, select == desplegable
     const provincia = document.getElementById("provincia"); // Select de Provincia
     const poblacion = document.getElementById("poblacion"); // Select de Población
@@ -8,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form"); // Formulario para capturar el evento de envío
 
     console.log("Cargando script...");
+
+
+
 
     // Cargar las comunidades autónomas al cargar la página
     fetch("https://raw.githubusercontent.com/frontid/ComunidadesProvinciasPoblaciones/refs/heads/master/ccaa.json")
@@ -143,5 +160,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.error("Error obteniendo imágenes:", error);
                 imageContainer.innerHTML = "<p>Error al obtener imágenes. Inténtalo de nuevo.</p>";
             });
+
     });
 });
